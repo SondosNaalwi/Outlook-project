@@ -1,24 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import PrimarySearchAppBar from './Components/Header';
+import ButtonAppBar from './Components/NavBar';
+import BottomAppBar from './Components/Center';
+import SimpleAccordion from './Components/SideBar';
+import { Box, Stack } from '@mui/system';
+import RightSide from './Components/RightSide';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <PrimarySearchAppBar />
+    <ButtonAppBar />
+    <Box >
+      <Stack direction="row">
+        <SimpleAccordion />
+        <BottomAppBar />
+        <RightSide />
+      </Stack>
+      
+    </Box>
+    
+    </>
+    
   );
 }
 
